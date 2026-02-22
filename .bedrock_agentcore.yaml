@@ -1,0 +1,182 @@
+default_agent: customercare_agent_with_memory
+agents:
+  agentcore_lang_runtime:
+    name: agentcore_lang_runtime
+    language: python
+    node_version: '20'
+    entrypoint: C:/Users/leelakarthik/Desktop/GenAI/Projects/bedrock_basic_chatbot/01_agentcore_runtime.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: none
+    source_path: C:\Users\leelakarthik\Desktop\GenAI\Projects\bedrock_basic_chatbot
+    aws:
+      execution_role: arn:aws:iam::984357029768:role/AmazonBedrockAgentCoreSDKRuntime-us-west-2-c980c3716d
+      execution_role_auto_create: false
+      account: '984357029768'
+      region: us-west-2
+      ecr_repository: 984357029768.dkr.ecr.us-west-2.amazonaws.com/bedrock-agentcore-agentcore_lang_runtime
+      ecr_auto_create: false
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: agentcore_lang_runtime-yNUvk15TjP
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:984357029768:runtime/agentcore_lang_runtime-yNUvk15TjP
+      agent_session_id: 90e960e1-4511-4bb5-a30a-93aae46658cc
+    codebuild:
+      project_name: bedrock-agentcore-agentcore_lang_runtime-builder
+      execution_role: arn:aws:iam::984357029768:role/AmazonBedrockAgentCoreSDKCodeBuild-us-west-2-c980c3716d
+      source_bucket: bedrock-agentcore-codebuild-sources-984357029768-us-west-2
+    memory:
+      mode: NO_MEMORY
+      memory_id: null
+      memory_arn: null
+      memory_name: null
+      event_expiry_days: 30
+      first_invoke_memory_check_done: false
+      was_created_by_toolkit: false
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false
+  customercare_with_memory:
+    name: customercare_with_memory
+    language: python
+    node_version: '20'
+    entrypoint: C:/Users/leelakarthik/Desktop/GenAI/Projects/bedrock_basic_chatbot/02_agentcore_memory.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: none
+    source_path: C:\Users\leelakarthik\Desktop\GenAI\Projects\bedrock_basic_chatbot
+    aws:
+      execution_role: null
+      execution_role_auto_create: true
+      account: '984357029768'
+      region: us-west-2
+      ecr_repository: null
+      ecr_auto_create: true
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: null
+      agent_arn: null
+      agent_session_id: null
+    codebuild:
+      project_name: null
+      execution_role: null
+      source_bucket: null
+    memory:
+      mode: STM_ONLY
+      memory_id: null
+      memory_arn: null
+      memory_name: customercare_with_memory_memory
+      event_expiry_days: 30
+      first_invoke_memory_check_done: false
+      was_created_by_toolkit: false
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false
+  customercare_agent_with_memory:
+    name: customercare_agent_with_memory
+    language: python
+    node_version: '20'
+    entrypoint: C:/Users/leelakarthik/Desktop/GenAI/Projects/bedrock_basic_chatbot/02_agentcore_memory.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: none
+    source_path: C:\Users\leelakarthik\Desktop\GenAI\Projects\bedrock_basic_chatbot
+    aws:
+      execution_role: arn:aws:iam::984357029768:role/AmazonBedrockAgentCoreSDKRuntime-us-west-2-e28668beb4
+      execution_role_auto_create: false
+      account: '984357029768'
+      region: us-west-2
+      ecr_repository: 984357029768.dkr.ecr.us-west-2.amazonaws.com/bedrock-agentcore-customercare_agent_with_memory
+      ecr_auto_create: false
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: customercare_agent_with_memory-N6MaSjD9g2
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:984357029768:runtime/customercare_agent_with_memory-N6MaSjD9g2
+      agent_session_id: 74f814a7-2a95-4e9b-a2e2-6150ff8eb0a7
+    codebuild:
+      project_name: bedrock-agentcore-customercare_agent_with_memory-builder
+      execution_role: arn:aws:iam::984357029768:role/AmazonBedrockAgentCoreSDKCodeBuild-us-west-2-e28668beb4
+      source_bucket: bedrock-agentcore-codebuild-sources-984357029768-us-west-2
+    memory:
+      mode: STM_AND_LTM
+      memory_id: custumer_care_agent_memory-jmTeQeDNnz
+      memory_arn: null
+      memory_name: customercare_agent_with_memory_memory
+      event_expiry_days: 30
+      first_invoke_memory_check_done: false
+      was_created_by_toolkit: false
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false
