@@ -15,4 +15,5 @@ dependencies = [
     "langgraph>=1.0.4",
     "langgraph-checkpoint-aws>=1.0.1",
     "sentence-transformers>=5.1.2",
+    "streamlit>=1.45.0",
 ]
